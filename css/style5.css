@@ -1,0 +1,131 @@
+  *{margin: 0;
+       padding: 0;
+       font-family: Microsoft sans serif
+        }
+
+/*Title*/
+    h3{
+        text-align: center;
+        top: 18%;
+        font-size: 60px;
+        color: #fff;
+        text-shadow: 0px 0px 5px white;
+        position: absolute;
+        left: 35%;
+        font-family :sans-serif;
+    }
+
+/*Background*/
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,1)), url(../pictures/5.jpg);
+    height: 145vh;
+    background-size:cover;
+}
+
+#gall {
+    padding: 80px 0;
+    color: black;
+}
+/*Gallery*/
+    .gallery{
+        height: 60%;
+        width: 100%;
+        display: flex;
+        margin: 2% auto 0;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+    }
+    .image-box{
+        margin: 0 1%;
+        flex-grow: 1;
+        flex-basis:0;
+        transition:.5s;
+    }
+    .image-box img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:.5s;
+    }
+    .image-box:hover{
+        flex-basis:20%;
+    }
+    .active{
+        flex-basis: 20%;
+    }
+    .gallery:hover.active{
+        flex-basis: 0;
+    }
+    .image-box:nth-child(1):hover{
+        flex-basis: 50%;
+    }
+
+
+/*Navigation Bar*/
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+    justify-content: space-between;
+    background: #000;
+    padding: 40px 100px;
+    transition: 0.6s;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px 1px white; 
+}
+
+.main{
+    background-color: #000;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo{
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    transform: translate(-3%,-3%);
+}
+.logo h2{
+    color: #fff;
+    font-size: 35px;
+}
+
+/*LINKS*/
+ul{
+    position: fixed;
+    top: 5%;
+    right: 1%;
+    transform: translate(-1%,-5%);
+    list-style-type:none;
+}
+
+ul li{
+    display:inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+ul li a:hover{
+    background-color: pink;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px pink; 
+}
+
+ul li.active a{
+    background-color: pink;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px pink; 
+}
+
